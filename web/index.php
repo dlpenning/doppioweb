@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Up and running</h1>
+    Ga naar de test environment: <a href="tests/login.php">Test</a>
 
     <form action="tests/login.php" method="post">
     Name: <input type="text" name="name"><br>
@@ -16,4 +17,4 @@
 
 
 </body>
-</html>
+</html> 

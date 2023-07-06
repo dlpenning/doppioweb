@@ -6,14 +6,15 @@
     <title>Up and running</title>
 </head>
 <body>
-    <?php 
+    <?php
     echo "You tried loggin in with name: " . $_POST["name"] ;
     echo "<br>" ;
     echo "And email adress: " . $_POST["email"] ;
     ?>
 
+    <br>
     <a href="../index.php" > Ga terug ofz</a>
-
+    <br>
 
     <?php
     echo date("d-m-y");
@@ -21,6 +22,8 @@
     $timezone = new DateTimeZone("europe/amsterdam");
     $date = new DateTimeImmutable("now", $timezone);
     echo $date->format("H:i:s");
+    echo "<br>";
+    echo date("H:i:s");
     ?>
 
     
