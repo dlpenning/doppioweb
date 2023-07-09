@@ -2,8 +2,20 @@ version: '3.7'
 
 services:
   web:
+    container_name: doppio_web
     build: './docker/apache'
     volumes:
       - ./web/:/var/www/html
     ports:
       - '8080:80'
+  db:
+    container_name: doppio_database
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=fff200
+      - MYSQL_DATABASE=doppio
+      - MYSQL_USER=doppio
+      - MYSQL_PASSWORD=fff200
+    ports:
+      - "9906:3306"
